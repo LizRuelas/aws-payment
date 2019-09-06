@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AWS Community Day 2019</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <link rel="stylesheet" href="css/waitMe.min.css"/>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+   <!-- Multi step form --> 
+  <section class="multi_step_form background_aws">  
+    <form id="msform"> 
+    <!-- Tittle -->
+    <!-- <div class="tittle">
+      <img src="https://communityday.aws.pe/images/logo.png" alt="">
+      <img src="https://communityday.aws.pe/images/banner_bg.jpg" alt="">
+    </div> -->
+    <!-- progressbar -->
+    <ul id="progressbar" style="padding-left:0px">
+      <li class="active">Datos Personales</li>  
+      <li>Descripción</li> 
+      <li>Pago</li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset>  
+      <div class="form"> 
+        <div class="form-group form_user">
+          <label for="">Nombres y Apellidos</label>
+          <input class="form-control" id="name">
+        </div>
+        <div class="form-group form_user">
+          <label for="">Dirección</label>
+          <input class="form-control" id="address">
+        </div>
+        <div class="form-group form_user">
+          <label for="">Telefono</label>
+          <input class="form-control" id="telefono">
+        </div>
+        <div class="form-group form_user">
+          <label for="">Ciudad</label>
+          <input class="form-control" id="city">
+        </div>
+      </div> <br>
+      <button type="button" class="action-button previous_button" style="margin-bottom: 10px">Atrás</button>
+      <button type="button" class="next action-button">Continuar</button>  
+    </fieldset>
+    <fieldset>
+      <div class="form">
+        <div class="form-group form_user">
+          <label for="">Monto a pagar</label>
+          <input class="form-control" id="amount">
+        </div>
+        <button id="calcularComision" class="action-button">Calcular comisión</button><br><br>
+        <div class="form-group form_user">
+            <label for="">Comisión redondeada aproximada de la pasarela de pago</label>
+            <input disabled class="form-control" id="comisionDesc">
+          </div>
+        <div class="form-group form_user">
+          <label for="">Moneda</label>
+          <input disabled class="form-control" id="moneda" value="PEN">
+        </div>
+        <div class="form-group form_user">
+          <label for="">Proveedor</label>
+          <select class="product_select">
+            <option selected value="0">Seleccionar proveedor</option> 
+            <option value="pk_test_LlPkJ6CtgcJ946m9">Coffee Break</p></option>
+            <option value="pk_test_p6nYVGxww8ZdUfCL">Pizzas y Bebidas</option>
+            <option value="pk_test_Rp2uV5dXI3quFq2X">Letras corporeas volumetricas</option>  
+          </select>
+        </div>
+      </div> <br>
+      <button type="button" class="action-button previous previous_button" style="margin-bottom: 10px">Atrás</button>
+      <button id="resumen" type="button" class="next action-button">Continuar</button>  
+    </fieldset>  
+    <fieldset>
+      <div class="form-group">
+        <h4 style="color:#FBC430">RESUMEN</h4>
+        <div class="resumen">
+          <label>NOMBRE: <span id="r_name"></span></label><br>
+          <label>PROVEEDOR: <span id="r_prov"></span></label><br>
+          <label>TOTAL A PAGAR: <span id="r_montoTotal"></span></label>
+        </div>
+      </div>
+      <button type="button" class="action-button previous previous_button" style="margin-bottom: 10px">Atrás</button> 
+      <a id="culqi" class="action-button">PAGAR</a>     
+    </fieldset>  
+    </form>  
+  </section> 
+  <!-- End Multi step form --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/js/intlTelInput.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <script src="https://checkout.culqi.com/js/v3"></script>
+  <script type="text/javascript" src="js/waitMe.min.js"></script>
+  <script src="js/culqi.js" ></script>
+  <script src="js/app.js" ></script>    
+</body>
+</html>

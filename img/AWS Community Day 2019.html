@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8081/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AWS Community Day 2019</title>
+    <link rel="stylesheet" href="./AWS Community Day 2019_files/bootstrap.css">
+    <link rel="stylesheet" href="./AWS Community Day 2019_files/intlTelInput.css">
+    <link rel="stylesheet" href="./AWS Community Day 2019_files/ionicons.min.css">
+    <link rel="stylesheet" href="./AWS Community Day 2019_files/nice-select.min.css">
+    <link rel="stylesheet" href="./AWS Community Day 2019_files/app.css">
+</head>
+<body>
+   <!-- Multi step form --> 
+  <section class="multi_step_form background_aws">  
+    <form id="msform"> 
+    <!-- Tittle -->
+    <!-- <div class="tittle">
+      <img src="https://communityday.aws.pe/images/logo.png" alt="">
+      <img src="https://communityday.aws.pe/images/banner_bg.jpg" alt="">
+    </div> -->
+    <!-- progressbar -->
+    <ul id="progressbar" style="padding-left:0px">
+      <li class="active">Datos Personales</li>  
+      <li class="active">Descripción</li> 
+      <li class="active">Pago</li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset style="transform: scale(0.8); position: absolute; opacity: 0; display: none;">  
+      <div class="form"> 
+        <div class="form-group form_user">
+          <label for="">Nombres y Apellidos</label>
+          <input class="form-control" id="name">
+        </div>
+        <div class="form-group form_user">
+          <label for="">Dirección</label>
+          <input class="form-control" id="address">
+        </div>
+        <div class="form-group form_user">
+          <label for="">Telefono</label>
+          <input class="form-control" id="telefono">
+        </div>
+        <div class="form-group form_user">
+          <label for="">Ciudad</label>
+          <input class="form-control" id="city">
+        </div>
+        <div class="form-group form_user">
+          <label for="">Email</label>
+          <input class="form-control" id="email">
+        </div>
+      </div> <br>
+      <button type="button" class="action-button previous_button" style="margin-bottom: 10px">Atrás</button>
+      <button type="button" class="next action-button">Continuar</button>  
+    </fieldset>
+    <fieldset style="display: none; left: 0%; opacity: 0; transform: scale(0.8); position: absolute;">
+      <div class="form">
+        <div class="form-group form_user">
+          <label for="">Monto a pagar</label>
+          <input class="form-control" id="amount">
+        </div>
+        <button id="calcularComision" class="action-button">Calcular comisión</button><br><br>
+        <div class="form-group form_user">
+            <label for="">Comisión aproximada de la pasarela de pago</label>
+            <input disabled="" class="form-control" id="comisionDesc">
+          </div>
+        <div class="form-group form_user">
+          <label for="">Moneda</label>
+          <input disabled="" class="form-control" id="moneda" value="PEN">
+        </div>
+        <div class="form-group form_user">
+          <label for="">Proveedor</label>
+          <select class="product_select">
+            <option selected="">Seleccionar proveedor</option> 
+            <option value="1">Coffee Break</option>
+            <option value="2">Pizzas y Bebidas</option>
+            <option value="3">Letras corporeas volumetricas</option>  
+          </select>
+        </div>
+      </div> <br>
+      <button type="button" class="action-button previous previous_button" style="margin-bottom: 10px">Atrás</button>
+      <button id="resumen" type="button" class="next action-button">Continuar</button>  
+    </fieldset>  
+    <fieldset style="display: block; left: 0%; opacity: 1;">
+      <div class="form-group ">
+        <h3 style="color:#FBC430">Resumen</h3>
+        <div>
+          <label style="color:#FBC430">Nombre: <span id="r_name">panel</span></label>
+          <label style="color:#FBC430">Proveedor:</label><p id="r_prov"></p>
+          <label style="color:#FBC430">Total a pagar:</label><p id="r_montoTotal"></p>
+        </div>
+      </div>
+      <button type="button" class="action-button previous previous_button" style="margin-bottom: 10px">Atrás</button> 
+      <a id="pagar" class="action-button">PAGAR</a>     
+    </fieldset>  
+    </form>  
+  </section> 
+  <!-- End Multi step form --> 
+  <script src="./AWS Community Day 2019_files/popper.min.js"></script>
+  <script src="./AWS Community Day 2019_files/jquery.min.js"></script>
+  <script src="./AWS Community Day 2019_files/bootstrap.min.js"></script>
+  <script src="./AWS Community Day 2019_files/jquery.easing.min.js"></script>
+  <script src="./AWS Community Day 2019_files/intlTelInput.js"></script>
+  <script src="./AWS Community Day 2019_files/jquery.nice-select.min.js"></script>
+  <script src="./AWS Community Day 2019_files/v3"></script>
+  <script src="./AWS Community Day 2019_files/culqi.js"></script>
+  <script src="./AWS Community Day 2019_files/app.js"></script>    
+
+</body></html>
