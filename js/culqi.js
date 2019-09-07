@@ -20,11 +20,11 @@ $('#calcularComision').click(function (e) {
     $('#r_name').text(name);
     if (proveedor == 0 ) {
       $('#r_prov').text("----------");
-    } else if (proveedor == "pk_test_LlPkJ6CtgcJ946m9") {
+    } else if (proveedor == "pk_live_YGwMe6MLzVIEZGFG") {
       $('#r_prov').text("Coffee Break");
-    } else if (proveedor == "pk_test_p6nYVGxww8ZdUfCL") {
+    } else if (proveedor == "pk_live_ByCROQbFo9zGLERv") {
       $('#r_prov').text("Pizzas y Bebidas");
-    } else if (proveedor == "pk_test_Rp2uV5dXI3quFq2X"){
+    } else if (proveedor == "pk_live_me3icufvx2I1AyGv"){
       $('#r_prov').text("Letras corporeas volumetricas"); 
     }
     $('#r_montoTotal').text(total)
@@ -82,7 +82,7 @@ function culqi() {
         }
         if(result.object === 'error'){
             alert(result.user_message);
-            alert(result.merchant_message);
+            $('body').waitMe('hide');
         }
       },
       error: function(error) {
